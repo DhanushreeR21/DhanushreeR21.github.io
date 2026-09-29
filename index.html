@@ -1,675 +1,1258 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dhanushree R | Data Science & Web Developer</title>
+    <meta name="description"
+        content="Dhanushree R - Final Year Computer Science Engineering Student | Data Science | Data Analytics | AI/ML">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+    <title>Dhanushree R | Personal Portfolio</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background: #f5f7fb;
-            color: #222;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        /* NAVBAR */
-        header {
-            background: #123c69;
-            color: white;
-            padding: 15px 8%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            color: #ffd166;
-        }
-
-        /* HERO */
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #eaf4ff, #ffffff);
-        }
-
-        .hero h1 {
-            font-size: 50px;
-            color: #123c69;
-            margin-bottom: 10px;
-        }
-
-        .hero h2 {
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            font-size: 18px;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 25px;
-            background: #123c69;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-        }
-
-        .btn:hover {
-            background: #0b2948;
-        }
-
-        /* COMMON SECTION */
-        section {
-            padding: 70px 8%;
-        }
-
-        section h2 {
-            text-align: center;
-            color: #123c69;
-            font-size: 32px;
-            margin-bottom: 35px;
-        }
-
-        /* ABOUT */
-        .about {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-            font-size: 17px;
-        }
-
-        /* EDUCATION */
-        .education-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-            justify-content: center;
-        }
-
-        .education-card {
-            background: white;
-            width: 300px;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .education-card h3 {
-            color: #123c69;
-            margin-bottom: 10px;
-        }
-
-        /* SKILLS */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .skill {
-            background: white;
-            padding: 15px 25px;
-            border-radius: 25px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            font-weight: bold;
-        }
-
-        /* PROJECTS */
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .project-card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .project-card h3 {
-            color: #123c69;
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            margin-bottom: 10px;
-        }
-
-        .project-tech {
-            font-weight: bold;
-            color: #555;
-        }
-
-        /* CERTIFICATES */
-        .certificates-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .certificate-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .certificate-card h3 {
-            color: #123c69;
-            margin-bottom: 15px;
-        }
-
-        .certificate-card img {
-            width: 100%;
-            max-height: 450px;
-            object-fit: contain;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-        }
-
-        .certificate-card iframe {
-            width: 100%;
-            height: 400px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-        }
-
-        .certificate-btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #123c69;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .certificate-btn:hover {
-            background: #0b2948;
-        }
-
-        /* CONTACT */
-        .contact {
-            text-align: center;
-            background: #eaf4ff;
-        }
-
-        .contact p {
-            margin: 10px 0;
-            font-size: 17px;
-        }
-
-        .contact a {
-            color: #123c69;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #123c69;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* MOBILE */
-        @media (max-width: 768px) {
-
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            section {
-                padding: 50px 5%;
-            }
-        }
-    </style>
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+    <!-- ================= NAVBAR ================= -->
 
-<header>
-    <nav>
+    <header class="header">
 
-        <div class="logo">
-            DHANUSHREE R
+        <nav class="navbar">
+
+            <div class="logo">
+                Dhanushree R
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#courses">Courses</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#certificates">Certificates</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="hello">
+                Hello, I'm
+            </p>
+
+            <h1>
+                Dhanushree R
+            </h1>
+
+            <h2>
+                Final Year B.E. CSE Student
+            </h2>
+
+            <h3>
+                Data Science & Data Analytics Aspirant | AI/ML Enthusiast
+            </h3>
+
+            <p class="hero-text">
+                I am a passionate Computer Science Engineering student interested
+                in Data Science, Data Analytics, Machine Learning and Artificial Intelligence.
+                I enjoy building practical projects and learning new technologies.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+
+            </div>
+
         </div>
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-
-    </nav>
-</header>
+    </section>
 
 
-<!-- ================= HOME ================= -->
+    <!-- ================= ABOUT ================= -->
 
-<section class="hero" id="home">
+    <section id="about" class="section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
+            <div class="about-content">
+
+                <p>
+                    I am a final-year Computer Science and Engineering student
+                    at Ghousia Institute of Technology for Women, Bangalore.
+                    I have a strong interest in Data Science, Data Analytics,
+                    Machine Learning and Artificial Intelligence.
+                </p>
+
+                <p>
+                    I have hands-on experience with Python, SQL, data analysis,
+                    data visualization and machine learning through academic
+                    projects and practical learning.
+                </p>
+
+                <p>
+                    I am currently developing my technical skills through
+                    AIML and Data Science courses and working on projects
+                    that solve real-world problems.
+                </p>
+
+                <p>
+                    My career interests include Data Analyst, Data Scientist,
+                    Machine Learning, AI and Software Development roles.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section id="education" class="section section-light">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Education
+            </h2>
+
+            <div class="education-container">
+
+                <!-- BE -->
+
+                <div class="education-card">
+
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Bachelor of Engineering - Computer Science & Engineering
+                        </h3>
+
+                        <h4>
+                            Ghousia Institute of Technology for Women
+                        </h4>
+
+                        <p>
+                            Visvesvaraya Technological University
+                        </p>
+
+                        <p>
+                            <strong>2023 - Present</strong>
+                        </p>
+
+                        <p>
+                            GPA: <strong>8.67</strong>
+                        </p>
+
+                        <p>
+                            Bangalore, Karnataka
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PUC -->
+
+                <div class="education-card">
+
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Pre-University Education
+                        </h3>
+
+                        <h4>
+                            SRS PU College
+                        </h4>
+
+                        <p>
+                            Chitradurga, Karnataka
+                        </p>
+
+                        <p>
+                            <strong>2021 - 2023</strong>
+                        </p>
+
+                        <p>
+                            Percentage: <strong>81%</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SSLC -->
+
+                <div class="education-card">
+
+                    <div class="education-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Secondary School Leaving Certificate
+                        </h3>
+
+                        <h4>
+                            Government Public School
+                        </h4>
+
+                        <p>
+                            Hariyabbe, Chitradurga
+                        </p>
+
+                        <p>
+                            <strong>2020 - 2021</strong>
+                        </p>
+
+                        <p>
+                            Percentage: <strong>94%</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills" class="section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Technical Skills
+            </h2>
+
+
+            <div class="skills-grid">
+
+                <!-- Data Analytics -->
+
+                <div class="skill-card">
+
+                    <i class="fas fa-chart-line skill-icon"></i>
+
+                    <h3>
+                        Data Analytics
+                    </h3>
+
+                    <div class="skill-tags">
+
+                        <span>SQL</span>
+                        <span>Excel</span>
+                        <span>Power BI</span>
+                        <span>Power Query</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Programming -->
+
+                <div class="skill-card">
+
+                    <i class="fas fa-code skill-icon"></i>
+
+                    <h3>
+                        Programming
+                    </h3>
+
+                    <div class="skill-tags">
+
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>C</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AIML -->
+
+                <div class="skill-card">
+
+                    <i class="fas fa-robot skill-icon"></i>
+
+                    <h3>
+                        AI / Machine Learning
+                    </h3>
+
+                    <div class="skill-tags">
+
+                        <span>Machine Learning</span>
+                        <span>Artificial Intelligence</span>
+                        
+
+                    </div>
+
+                </div>
+
+
+                <!-- Web -->
+
+                <div class="skill-card">
+
+                    <i class="fas fa-globe skill-icon"></i>
+
+                    <h3>
+                        Web Development
+                    </h3>
+
+                    <div class="skill-tags">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tools -->
+
+                <div class="skill-card">
+
+                    <i class="fas fa-tools skill-icon"></i>
+
+                    <h3>
+                        Tools
+                    </h3>
+
+                    <div class="skill-tags">
+
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>XAMPP</span>
+                        <span>VS Code</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COURSES ================= -->
+
+    <section id="courses" class="section section-light">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Trainings & Courses
+            </h2>
+
+
+            <div class="courses-container">
+
+
+                <div class="course-card">
+
+                    <i class="fas fa-brain"></i>
+
+                    <h3>
+                        Advanced Certificate in Artificial Intelligence & Machine Learning
+                    </h3>
+
+                    <h4>
+                        CDAC
+                    </h4>
+
+                    <p>
+                        Currently pursuing. Learning Python, Machine Learning,
+                        Deep Learning, Data Analytics, SQL and AI tools through
+                        hands-on projects.
+                    </p>
+
+                </div>
+
+
+                <div class="course-card">
+
+                    <i class="fas fa-database"></i>
+
+                    <h3>
+                        Master's in Data Science
+                    </h3>
+
+                    <h4>
+                        CADD Livewire
+                    </h4>
+
+                    <p>
+                        Currently pursuing practical training in Data Science,
+                        Data Analytics, Python, SQL, Machine Learning and
+                        Data Visualization.
+                    </p>
+
+                </div>
+
+
+                <div class="course-card">
+
+                    <i class="fas fa-database"></i>
+
+                    <h3>
+                        Introduction to the Fundamentals of Databases
+                    </h3>
+
+                    <h4>
+                        Simplilearn SkillUp
+                    </h4>
+
+                    <p>
+                        Completed training covering fundamental database concepts.
+                    </p>
+
+                </div>
+
+
+                <div class="course-card">
+
+                    <i class="fas fa-book"></i>
+
+                    <h3>
+                        Introduction to Databases and SQL
+                    </h3>
+
+                    <h4>
+                        Great Learning Academy
+                    </h4>
+
+                    <p>
+                        Completed training in database concepts and SQL fundamentals.
+                    </p>
+
+                </div>
+
+
+                <div class="course-card">
+
+                    <i class="fas fa-certificate"></i>
+
+                    <h3>
+                        EBSCO Training
+                    </h3>
+
+                    <h4>
+                        VTU
+                    </h4>
+
+                    <p>
+                        Completed technical training.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects" class="section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My Projects
+            </h2>
+
+
+            <div class="projects-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <div class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+
+                    <h3>
+                        Sign Language Gesture Recognizer
+                    </h3>
+
+                    <p class="project-subtitle">
+                        AI-Based Real-Time Hand Gesture Recognition System
+                    </p>
+
+                    <p>
+                        A computer vision and machine learning based system
+                        designed to recognize sign language hand gestures
+                        in real time and convert recognized gestures into
+                        meaningful output for accessibility.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Real-time hand detection
+                        </li>
+
+                        <li>
+                            Hand landmark detection
+                        </li>
+
+                        <li>
+                            Gesture recognition
+                        </li>
+
+                        <li>
+                            Accessibility-focused application
+                        </li>
+
+                    </ul>
+
+                    <div class="project-tech">
+
+                        <span>Python</span>
+                        <span>OpenCV</span>
+                        <span>MediaPipe</span>
+                        <span>Machine Learning</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
+
+                    <h3>
+                        CleanData AI
+                    </h3>
+
+                    <p class="project-subtitle">
+                        Interactive Data Cleaning & Visualization Platform
+                    </p>
+
+                    <p>
+                        An interactive Streamlit platform for uploading,
+                        cleaning, analyzing and visualizing datasets.
+                        The application helps users identify data quality
+                        issues and prepare cleaner datasets for analysis.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            CSV and Excel file upload
+                        </li>
+
+                        <li>
+                            Missing value handling
+                        </li>
+
+                        <li>
+                            Duplicate detection
+                        </li>
+
+                        <li>
+                            Data type analysis
+                        </li>
+
+                        <li>
+                            Outlier analysis
+                        </li>
+
+                        <li>
+                            Data quality analysis
+                        </li>
+
+                        <li>
+                            AI-based cleaning suggestions
+                        </li>
+
+                        <li>
+                            Interactive Plotly visualizations
+                        </li>
+
+                        <li>
+                            Cleaned dataset export
+                        </li>
+
+                    </ul>
+
+                    <div class="project-tech">
+
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Plotly</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+
+                    <h3>
+                        Aptidude
+                    </h3>
+
+                    <p class="project-subtitle">
+                        Making Aptitude Learning Fun, Smart and Addictive Like a Game
+                    </p>
+
+                    <p>
+                        A gamified aptitude learning platform designed to help
+                        students practice aptitude concepts through interactive
+                        tests and performance tracking.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            User registration and login
+                        </li>
+
+                        <li>
+                            Topic-wise aptitude tests
+                        </li>
+
+                        <li>
+                            Mock tests
+                        </li>
+
+                        <li>
+                            Instant score
+                        </li>
+
+                        <li>
+                            Performance tracking
+                        </li>
+
+                    </ul>
+
+                    <div class="project-tech">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>XAMPP</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 4 -->
+
+                <div class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+
+                    <h3>
+                        Personal Portfolio Website
+                    </h3>
+
+                    <p class="project-subtitle">
+                        Dhanushree R - Personal Portfolio
+                    </p>
+
+                    <p>
+                        A responsive personal portfolio website showcasing
+                        my education, technical skills, projects, courses,
+                        certificates, interests and contact information.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Responsive design
+                        </li>
+
+                        <li>
+                            Project showcase
+                        </li>
+
+                        <li>
+                            Certificate section
+                        </li>
+
+                        <li>
+                            Contact section
+                        </li>
+
+                        <li>
+                            GitHub Pages deployment
+                        </li>
+
+                    </ul>
+
+                    <div class="project-tech">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>GitHub Pages</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ACADEMIC ACTIVITIES ================= -->
+
+    <section id="activities" class="section section-light">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Academic Activities
+            </h2>
+
+            <div class="activities-content">
+
+                <div class="activity-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <p>
+                        Studied relevant coursework including Machine Learning,
+                        Artificial Intelligence, DSA, DBMS, SQL, Data Analytics,
+                        Statistics, Python Programming, Data Mining and Software Engineering.
+                    </p>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <p>
+                        Developed academic projects using Python, SQL,
+                        Machine Learning and web technologies.
+                    </p>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <p>
+                        Participated in technical workshops and seminars
+                        related to Data Science and Artificial Intelligence.
+                    </p>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <p>
+                        Practiced programming, aptitude and problem-solving
+                        skills through academic and technical activities.
+                    </p>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <p>
+                        Participated in collaborative academic projects
+                        and technical presentations.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CERTIFICATES ================= -->
+
+    <section id="certificates" class="section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Certificates
+            </h2>
+
+
+            <div class="certificate-container">
+
+
+                <!-- CERTIFICATE 1 -->
+
+                <div class="certificate-card">
+
+                    <div class="certificate-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+
+                    <h3>
+                        Introduction to Databases and SQL
+                    </h3>
+
+                    <p>
+                        <strong>
+                            Great Learning Academy
+                        </strong>
+                    </p>
+
+                    <p>
+                        Certificate of completion for Introduction to
+                        Databases and SQL.
+                    </p>
+
+                    <a href="certificates/introduction database and SQl.pdf"
+                       target="_blank"
+                       class="certificate-btn">
+
+                        <i class="fas fa-file-pdf"></i>
+                        View PDF Certificate
+
+                    </a>
+
+                </div>
+
+
+                <!-- CERTIFICATE 2 -->
+
+                <div class="certificate-card">
+
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+
+                    <h3>
+                        Introduction to the Fundamentals of Databases
+                    </h3>
+
+                    <p>
+                        <strong>
+                            Simplilearn SkillUp
+                        </strong>
+                    </p>
+
+
+                    <!-- CERTIFICATE IMAGE -->
+
+                    <img
+                        src="certificates/fundamentals-databases.png"
+                        alt="Introduction to the Fundamentals of Databases Certificate"
+                        class="certificate-image"
+                    >
+
+
+                    <a href="certificates/fundamentals-databases.png"
+                       target="_blank"
+                       class="certificate-btn">
+
+                        <i class="fas fa-image"></i>
+                        View Full Certificate
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTERESTS ================= -->
+
+    <section id="interests" class="section section-light">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Career Interests
+            </h2>
+
+            <div class="interests-container">
+
+                <div class="interest-card">
+
+                    <i class="fas fa-chart-pie"></i>
+
+                    <h3>
+                        Data Science
+                    </h3>
+
+                </div>
+
+
+                <div class="interest-card">
+
+                    <i class="fas fa-chart-bar"></i>
+
+                    <h3>
+                        Data Analytics
+                    </h3>
+
+                </div>
+
+
+                <div class="interest-card">
+
+                    <i class="fas fa-laptop-code"></i>
+
+                    <h3>
+                        Software Engineering
+                    </h3>
+
+                </div>
+
+
+                <div class="interest-card">
+
+                    <i class="fas fa-globe"></i>
+
+                    <h3>
+                        Web Development
+                    </h3>
+
+                </div>
+
+
+                <div class="interest-card">
+
+                    <i class="fas fa-robot"></i>
+
+                    <h3>
+                        Machine Learning
+                    </h3>
+
+                </div>
+
+
+                <div class="interest-card">
+
+                    <i class="fas fa-code"></i>
+
+                    <h3>
+                        Software Development
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="section contact-section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Contact Me
+            </h2>
+
+            <p class="contact-intro">
+                Feel free to connect with me for opportunities,
+                collaborations or professional discussions.
+            </p>
+
+
+            <div class="contact-container">
+
+
+                <!-- EMAIL -->
+
+                <a href="mailto:dhanushreedhanu833@gmail.com"
+                   class="contact-card">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <div>
+
+                        <h3>
+                            Email
+                        </h3>
+
+                        <p>
+                            dhanushreedhanu833@gmail.com
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- PHONE -->
+
+                <a href="tel:+919663202898"
+                   class="contact-card">
+
+                    <i class="fas fa-phone"></i>
+
+                    <div>
+
+                        <h3>
+                            Phone
+                        </h3>
+
+                        <p>
+                            +91 9663202898
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- GITHUB -->
+
+                <a href="https://github.com/DhanushreeR21"
+                   target="_blank"
+                   class="contact-card">
+
+                    <i class="fab fa-github"></i>
+
+                    <div>
+
+                        <h3>
+                            GitHub
+                        </h3>
+
+                        <p>
+                            DhanushreeR21
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- LINKEDIN -->
+
+               <a href="https://www.linkedin.com/in/Dhanushree-r-21j"
+   target="_blank"
+   class="contact-card">
+
+    <i class="fab fa-linkedin"></i>
 
     <div>
+        <h3>LinkedIn</h3>
+        <p>linkedin.com/in/Dhanushree-r-21j</p>
+    </div>
 
-        <h1>Hi, I'm Dhanushree R</h1>
+</a>
 
-        <h2>Data Science | Data Analytics | Web Developer</h2>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
 
         <p>
-            I am a final-year Computer Science and Engineering student
-            passionate about Data Science, Data Analytics, Artificial
-            Intelligence and Web Development.
+            © 2026 Dhanushree R |
+            Personal Portfolio
         </p>
-
-        <a href="#about" class="btn">
-            Explore My Portfolio
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about">
-
-    <h2>About Me</h2>
-
-    <div class="about">
 
         <p>
-            I am Dhanushree R, a final-year Computer Science and Engineering
-            student at Ghousia Institute of Technology for Women, Bangalore,
-            with a CGPA of 8.9.
+            Built with HTML, CSS & JavaScript
         </p>
 
-        <br>
+    </footer>
 
-        <p>
-            I completed my 10th standard from Government Public School,
-            Hariyabbe, Chitradurga, with 94%, and my PUC from SRS PU College,
-            Chitradurga, with 81%.
-        </p>
 
-        <br>
+    <!-- ================= JAVASCRIPT ================= -->
 
-        <p>
-            I have a strong interest in Data Science, Data Analytics,
-            Artificial Intelligence and Web Development. I enjoy building
-            practical projects and learning new technologies.
-        </p>
+    <script>
 
-    </div>
+        // Smooth scrolling for navigation links
 
-</section>
+        document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
+            link.addEventListener("click", function (event) {
 
-<!-- ================= EDUCATION ================= -->
+                event.preventDefault();
 
-<section id="education">
+                const target = document.querySelector(
+                    this.getAttribute("href")
+                );
 
-    <h2>Education</h2>
+                if (target) {
 
-    <div class="education-container">
+                    target.scrollIntoView({
+                        behavior: "smooth"
+                    });
 
-        <div class="education-card">
+                }
 
-            <h3>B.E. Computer Science and Engineering</h3>
+            });
 
-            <p>
-                Ghousia Institute of Technology for Women
-            </p>
+        });
 
-            <p>
-                Bangalore
-            </p>
 
-            <p>
-                CGPA: 8.9
-            </p>
+        // Add active effect while scrolling
 
-        </div>
+        const sections = document.querySelectorAll("section");
 
+        const navLinks = document.querySelectorAll(".nav-links a");
 
-        <div class="education-card">
+        window.addEventListener("scroll", function () {
 
-            <h3>PUC</h3>
+            let current = "";
 
-            <p>
-                SRS PU College
-            </p>
+            sections.forEach(function (section) {
 
-            <p>
-                Chitradurga
-            </p>
+                const sectionTop = section.offsetTop - 150;
 
-            <p>
-                Percentage: 81%
-            </p>
+                if (pageYOffset >= sectionTop) {
 
-        </div>
+                    current = section.getAttribute("id");
 
+                }
 
-        <div class="education-card">
+            });
 
-            <h3>10th Standard</h3>
 
-            <p>
-                Government Public School
-            </p>
+            navLinks.forEach(function (link) {
 
-            <p>
-                Hariyabbe, Chitradurga
-            </p>
+                link.classList.remove("active");
 
-            <p>
-                Percentage: 94%
-            </p>
+                if (link.getAttribute("href") === "#" + current) {
 
-        </div>
+                    link.classList.add("active");
 
-    </div>
+                }
 
-</section>
+            });
 
+        });
 
-<!-- ================= SKILLS ================= -->
-
-<section id="skills">
-
-    <h2>Technical Skills</h2>
-
-    <div class="skills-container">
-
-        <div class="skill">Python</div>
-        <div class="skill">C</div>
-        <div class="skill">Java</div>
-        <div class="skill">SQL</div>
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Data Science</div>
-        <div class="skill">Data Analytics</div>
-        <div class="skill">AIML</div>
-        <div class="skill">Streamlit</div>
-        <div class="skill">Pandas</div>
-        <div class="skill">NumPy</div>
-        <div class="skill">Plotly</div>
-        <div class="skill">Power BI</div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= PROJECTS ================= -->
-
-<section id="projects">
-
-    <h2>My Projects</h2>
-
-    <div class="projects-container">
-
-
-        <!-- PROJECT 1 -->
-
-        <div class="project-card">
-
-            <h3>
-                Sign Language Gesture Recognition
-            </h3>
-
-            <p>
-                A computer vision and machine learning based project that
-                recognizes hand gestures captured through a webcam and
-                converts the detected gestures into meaningful text.
-            </p>
-
-            <p class="project-tech">
-                Technologies: Python | Computer Vision | Machine Learning |
-                CNN | LSTM
-            </p>
-
-        </div>
-
-
-        <!-- PROJECT 2 -->
-
-        <div class="project-card">
-
-            <h3>
-                CleanData AI
-            </h3>
-
-            <p>
-                An interactive data cleaning and visualization platform
-                developed using Streamlit. It allows users to upload datasets,
-                identify data quality problems, clean the data and visualize
-                important patterns.
-            </p>
-
-            <p class="project-tech">
-                Technologies: Python | Streamlit | Pandas | NumPy | Plotly
-            </p>
-
-        </div>
-
-
-        <!-- PROJECT 3 -->
-
-        <div class="project-card">
-
-            <h3>
-                Aptitude Preparation Website
-            </h3>
-
-            <p>
-                A web-based aptitude preparation platform that provides
-                quantitative aptitude, logical reasoning, verbal ability,
-                mock tests, instant score calculation and performance
-                tracking.
-            </p>
-
-            <p class="project-tech">
-                Technologies: HTML | CSS | JavaScript | PHP | MySQL | XAMPP
-            </p>
-
-        </div>
-
-
-        <!-- PROJECT 4 -->
-
-        <div class="project-card">
-
-            <h3>
-                Personal Portfolio Website
-            </h3>
-
-            <p>
-                A responsive personal portfolio website developed to showcase
-                my education, technical skills, projects, certifications and
-                professional profile.
-            </p>
-
-            <p class="project-tech">
-                Technologies: HTML | CSS | JavaScript
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CERTIFICATES ================= -->
-
-<section id="certificates">
-
-    <h2>Certificates</h2>
-
-    <div class="certificates-container">
-
-
-        <!-- CERTIFICATE 1 : PNG -->
-
-        <div class="certificate-card">
-
-            <h3>
-                Introduction to the Fundamentals of Databases
-            </h3>
-
-            <img
-                src="certificates/fundamentals-databases.png"
-                alt="Introduction to the Fundamentals of Databases Certificate"
-            >
-
-            <br>
-
-            <a
-                href="certificates/fundamentals-databases.png"
-                target="_blank"
-                class="certificate-btn"
-            >
-                View Certificate
-            </a>
-
-        </div>
-
-
-        <!-- CERTIFICATE 2 : PDF -->
-
-        <div class="certificate-card">
-
-            <h3>
-                Introduction to Database and SQL
-            </h3>
-
-            <iframe
-                src="certificates/introduction-database-sql.pdf"
-                title="Introduction to Database and SQL Certificate">
-            </iframe>
-
-            <a
-                href="certificates/introduction-database-sql.pdf"
-                target="_blank"
-                class="certificate-btn"
-            >
-                Open Certificate PDF
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact" class="contact">
-
-    <h2>Contact Me</h2>
-
-    <p>
-        <strong>Email:</strong>
-        <a href="mailto:your-email@gmail.com">
-            your-email@gmail.com
-        </a>
-    </p>
-
-    <p>
-        <strong>LinkedIn:</strong>
-        <a href="#" target="_blank">
-            My LinkedIn Profile
-        </a>
-    </p>
-
-    <p>
-        <strong>GitHub:</strong>
-        <a href="#" target="_blank">
-            My GitHub Profile
-        </a>
-    </p>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <p>
-        © 2026 Dhanushree R | Personal Portfolio
-    </p>
-
-</footer>
-
+    </script>
 
 </body>
+
 </html>
